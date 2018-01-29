@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/mainNavTitle">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/mainNav_days"
+                    android:icon="@drawable/ic_menu_days"
+                    android:title="@string/mainNavDays" />
+                <item
+                    android:id="@+id/mainNav_checklists"
+                    android:icon="@drawable/ic_menu_checklists"
+                    android:title="@string/mainNavChecklists" />
+                <item
+                    android:id="@+id/mainNav_profile"
+                    android:icon="@drawable/ic_menu_profile"
+                    android:title="@string/mainNavProfile" />
+                <item
+                    android:id="@+id/mainNav_group"
+                    android:icon="@drawable/ic_menu_group"
+                    android:title="@string/mainNavGroup" />
+                <item
+                    android:id="@+id/mainNav_settings"
+                    android:icon="@drawable/ic_menu_settings"
+                    android:title="@string/mainNavSettings" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

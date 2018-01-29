@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">What\'s For Dinner</string>
+    <string name="app_developer" translatable="false">Red Berry Studios</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="mainNavTitle">Main menu</string>
+    <string name="mainNavDays">Days</string>
+    <string name="mainNavChecklists">Checklists</string>
+    <string name="mainNavGroup">Group</string>
+    <string name="mainNavProfile">Profile</string>
+    <string name="mainNavSettings">Settings</string>
+
+    <string name="facebook_app_id">204469666764169</string>
+    <string name="fb_login_protocol_scheme">fb204469666764169</string>
+</resources>
