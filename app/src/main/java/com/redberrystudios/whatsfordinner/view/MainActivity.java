@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,10 +16,10 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.redberrystudios.whatsfordinner.R;
-import com.redberrystudios.whatsfordinner.view.fragment.ChecklistsFragment;
-import com.redberrystudios.whatsfordinner.view.fragment.DaysFragment;
-import com.redberrystudios.whatsfordinner.view.fragment.GroupFragment;
-import com.redberrystudios.whatsfordinner.view.fragment.ProfileFragment;
+import com.redberrystudios.whatsfordinner.view.checklists.ChecklistsFragment;
+import com.redberrystudios.whatsfordinner.view.days.DaysFragment;
+import com.redberrystudios.whatsfordinner.view.group.GroupFragment;
+import com.redberrystudios.whatsfordinner.view.profile.ProfileFragment;
 import com.redberrystudios.whatsfordinner.view.settings.SettingsActivity;
 
 import butterknife.ButterKnife;
@@ -109,7 +110,10 @@ public class MainActivity extends AppCompatActivity
 
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.main_fragment_container, fragment).commit();
+        fragmentManager.beginTransaction()
+                .replace(R.id.main_fragment_container, fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                .commit();
 
         // Highlight the selected item has been done by NavigationView
         menuItem.setChecked(true);

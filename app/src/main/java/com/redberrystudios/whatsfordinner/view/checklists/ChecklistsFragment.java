@@ -1,4 +1,4 @@
-package com.redberrystudios.whatsfordinner.view.fragment;
+package com.redberrystudios.whatsfordinner.view.checklists;
 
 import android.content.Context;
 import android.os.Bundle;
