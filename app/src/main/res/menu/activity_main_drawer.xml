@@ -3,29 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item android:title="@string/mainNavTitle">
+    <item android:title="@string/main_nav_title">
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/mainNav_days"
+                    android:id="@+id/main_nav_days"
                     android:icon="@drawable/ic_menu_days"
-                    android:title="@string/mainNavDays" />
+                    android:title="@string/main_nav_days" />
                 <item
-                    android:id="@+id/mainNav_checklists"
+                    android:id="@+id/main_nav_checklists"
                     android:icon="@drawable/ic_menu_checklists"
-                    android:title="@string/mainNavChecklists" />
+                    android:title="@string/main_nav_checklists" />
                 <item
-                    android:id="@+id/mainNav_profile"
+                    android:id="@+id/main_nav_profile"
                     android:icon="@drawable/ic_menu_profile"
-                    android:title="@string/mainNavProfile" />
+                    android:title="@string/main_nav_profile" />
                 <item
-                    android:id="@+id/mainNav_group"
+                    android:id="@+id/main_nav_group"
                     android:icon="@drawable/ic_menu_group"
-                    android:title="@string/mainNavGroup" />
+                    android:title="@string/main_nav_group" />
                 <item
-                    android:id="@+id/mainNav_settings"
+                    android:id="@+id/main_nav_settings"
                     android:icon="@drawable/ic_menu_settings"
-                    android:title="@string/mainNavSettings" />
+                    android:title="@string/main_nav_settings" />
             </group>
         </menu>
     </item>
