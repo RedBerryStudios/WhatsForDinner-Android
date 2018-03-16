@@ -3,10 +3,11 @@ package com.redberrystudios.whatsfordinner.di.modules;
 import android.app.Application;
 
 import com.redberrystudios.whatsfordinner.AppExecutors;
+import com.redberrystudios.whatsfordinner.api.WFDApiService;
 import com.redberrystudios.whatsfordinner.repository.AppDatabase;
 import com.redberrystudios.whatsfordinner.repository.group.GroupDao;
 import com.redberrystudios.whatsfordinner.repository.group.GroupRepository;
-import com.redberrystudios.whatsfordinner.api.WFDApiService;
+import com.redberrystudios.whatsfordinner.repository.member.MemberDao;
 
 import javax.inject.Singleton;
 
@@ -26,6 +27,12 @@ public class DbModule {
     @Singleton
     public GroupDao providesGroupDao(AppDatabase appDatabase) {
         return appDatabase.groupDao();
+    }
+
+    @Provides
+    @Singleton
+    public MemberDao providesMemberDao(AppDatabase appDatabase) {
+        return appDatabase.memberDao();
     }
 
     @Provides

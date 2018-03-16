@@ -2,7 +2,6 @@ package com.redberrystudios.whatsfordinner;
 
 import android.app.Application;
 
-import com.redberrystudios.whatsfordinner.di.components.DaggerNetComponent;
 import com.redberrystudios.whatsfordinner.di.components.DaggerRepositoryComponent;
 import com.redberrystudios.whatsfordinner.di.components.RepositoryComponent;
 import com.redberrystudios.whatsfordinner.di.modules.AppModule;
@@ -16,15 +15,12 @@ public class WFDApplication extends Application {
 
     private RepositoryComponent mRepositoryComponent;
 
-    private NetComponent mNetComponent;
-
     @Override
     public void onCreate() {
         super.onCreate();
 
         this.mRepositoryComponent = createRepositoryComponent();
 
-        this.mNetComponent = createNetComponent();
     }
 
     private RepositoryComponent createRepositoryComponent() {
@@ -36,18 +32,8 @@ public class WFDApplication extends Application {
                 .build();
     }
 
-    private NetComponent createNetComponent() {
-        return DaggerNetComponent.builder()
-                .appModule(new AppModule(this))
-                .netModule(new NetModule(BASE_URL))
-                .build();
-    }
-
-    public RepositoryComponent getmRepositoryComponent() {
+    public RepositoryComponent getRepositoryComponent() {
         return mRepositoryComponent;
     }
 
-    public NetComponent getmNetComponent() {
-        return mNetComponent;
-    }
 }

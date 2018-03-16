@@ -16,6 +16,10 @@ public class GroupEntity {
 
     private String joinToken;
 
+    // members: DS.hasMany("member", {inverse: null, async: true}),
+    // days: DS.attr(),
+    // checklists: DS.hasMany("checklist", {inverse: null, async:true})
+
     public Long getId() {
         return id;
     }

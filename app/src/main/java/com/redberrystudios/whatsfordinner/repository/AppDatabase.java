@@ -10,8 +10,10 @@ import android.support.annotation.VisibleForTesting;
 import com.redberrystudios.whatsfordinner.AppExecutors;
 import com.redberrystudios.whatsfordinner.repository.group.GroupDao;
 import com.redberrystudios.whatsfordinner.repository.group.GroupEntity;
+import com.redberrystudios.whatsfordinner.repository.member.MemberDao;
+import com.redberrystudios.whatsfordinner.repository.member.MemberEntity;
 
-@Database(version = 1, entities = {GroupEntity.class})
+@Database(version = 1, entities = {GroupEntity.class, MemberEntity.class})
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase sInstance;
@@ -21,6 +23,8 @@ public abstract class AppDatabase extends RoomDatabase {
 
     //DAOs here
     public abstract GroupDao groupDao();
+
+    public abstract MemberDao memberDao();
 
     private final MutableLiveData<Boolean> mIsDatabaseCreated = new MutableLiveData<>();
 
